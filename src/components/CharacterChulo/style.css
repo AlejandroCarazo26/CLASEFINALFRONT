@@ -1,0 +1,33 @@
+
+
+.ContainerCharacterChulo {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+.ContainerCharacterChulo img {
+    border-radius: 50%;
+    height: 150px;
+}
+
+.InfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.InfoContainer h1{
+    margin-bottom: auto;
+}
