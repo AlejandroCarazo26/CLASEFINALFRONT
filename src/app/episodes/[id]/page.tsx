@@ -7,6 +7,8 @@ import { Episode, Character } from "@/app/types"
 import { getEpisodeById } from "@/api/getEpisodeById"
 import { api } from "@/api/api"
 import CharacterChulo from "@/components/CharacterChulo"
+import "./styles.css"
+
 
 const PageEpisodeDetail = () => {
     const router = useRouter();
@@ -36,7 +38,7 @@ const PageEpisodeDetail = () => {
     }, [id])
 
     return (
-        <div>
+        <div className="ContainerEpisodes">
             {loading && <h1>Cargando...</h1>} 
             {error && <h2>{error}</h2>}
 
@@ -46,11 +48,11 @@ const PageEpisodeDetail = () => {
                     <p>{episode.air_date}</p>
                     <p>{episode.episode}</p>
                     {personajes.map((p) => (
-                        <CharacterChulo key={p.id} props={{ character: p }} />
+                        <CharacterChulo key={p.id} character={p} />
                     ))}
                 </>
             )}
-            <button onClick={() => router.back()}> Volver </button>
+            <button className="backButton" onClick={() => router.back()}> Volver </button>
         </div>
     )
 }

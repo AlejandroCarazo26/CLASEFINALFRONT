@@ -1,0 +1,28 @@
+
+.ContainerEpisodes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+
+.backButton{
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    width: 120px;
+    padding: 12px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { ResultLocations } from "../types/location";
 import { api } from "@/api/api";
 import LocationChula from "@/components/LocationChula";
+import "./styles.css";
+import Paginador from "@/components/Paginador";
 
 
 const PageLocations = () => {
@@ -27,6 +29,12 @@ const PageLocations = () => {
         }
     } 
 
+    useEffect(() =>{
+        if(error){
+            alert(error);
+        }
+    }, [error]);
+
     useEffect(()=>{
         getLocations(page);
     }, [page]);
@@ -42,6 +50,13 @@ const PageLocations = () => {
             {resultLocations && resultLocations?.results.map((e)=>(
                 <LocationChula key={e.id} location={e}/>
             ))}
+
+            <Paginador
+                page={page}
+                next={!!resultLocations?.info.next}
+                prev={!!resultLocations?.info.prev}
+                setPage={setPage}
+            ></Paginador>
         </div>
         
     )

@@ -1,6 +1,6 @@
 
 
-import { Character, ResultCharacters, ResultEpisodes } from "@/app/types";
+import { Character } from "@/app/types";
 import { api } from "./api"
 
 export const GetOneCharacter = async(link : string)=>{

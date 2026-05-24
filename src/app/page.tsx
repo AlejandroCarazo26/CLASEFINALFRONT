@@ -55,9 +55,9 @@ const Home = () => {
         Buscar
       </button>
 
-      <div>
+      <div className="searchResults">
         {characters.map((e)=> (
-          <CharacterChulo key={e.id} props={{character: e}}/>
+          <CharacterChulo key={e.id} character={e}/>
         ))}
       </div>
     </div>

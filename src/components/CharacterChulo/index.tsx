@@ -2,40 +2,42 @@
 
 import { Character } from "@/app/types";
 import "./style.css"
-import { GetOneCharacter } from "@/api/getOneCharacter";
-import { useEffect, useState } from "react";
+// import { GetOneCharacter } from "@/api/getOneCharacter";
+// import { useEffect, useState } from "react";
 
-type Props = {
-    character?: Character,
-    link?: string
-}
+// type Props = {
+//     character?: Character,
+//     link?: string
+// }
 
-const CharacterChulo = ({props}:{props: Props}) =>{
-    const [personaje, setPersonaje] = useState<Character | null>(null)
+const CharacterChulo = ({character}:{character?: Character}) =>{
+    // const [personaje, setPersonaje] = useState<Character | null>(null)
     
     
-    useEffect(()=>{
+    // useEffect(()=>{
         
-        if(props.character){
-            setPersonaje(props.character)
+    //     if(props.character){
+    //         setPersonaje(props.character)
            
-        }
-        else if(props.link){
-            GetOneCharacter(props.link!).then((res)=>{
-                setPersonaje(res.data)
-            })
-        }
-    }, [])
-    if(!personaje){
-        return <p>Cargando...</p>
-    }
+    //     }
+    //     else if(props.link){
+    //         GetOneCharacter(props.link!).then((res)=>{
+    //             setPersonaje(res.data)
+    //         })
+    //     }
+    // }, [])
+    // if(!personaje){
+    //     return <p>Cargando...</p>
+    // }
+    //if (!character) return null;
+
     return(
         <div className="ContainerCharacterChulo">
-            <img src={personaje.image}></img>
+            <img src={character?.image}></img>
             <div className="InfoContainer">
-                <h1>{personaje!.name}</h1>
-                <p>{personaje!.gender}</p>
-                <p>{personaje!.location.name}</p>
+                <h1>{character?.name}</h1>
+                <p>{character?.gender}</p>
+                <p>{character?.location.name}</p>
 
             </div>
             

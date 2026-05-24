@@ -1,6 +1,5 @@
 "use client";
 
-
 import { api } from "@/api/api";
 import { useEffect, useState } from "react";
 import Paginador from "../../components/Paginador";
@@ -51,7 +50,7 @@ const PageCharacters = () => {
         <div className="ContainerCharacters">
             <h1> Personajitos</h1>
             {resultCharacters && resultCharacters?.results.map((e)=>
-                (<CharacterChulo key={e.id} props={{character:e}}/>)
+                (<CharacterChulo key={e.id} character={e}/>)
             )}
 
             <Paginador 
@@ -59,7 +58,7 @@ const PageCharacters = () => {
                 next={!!resultCharacters?.info.next}
                 prev={!!resultCharacters?.info.prev}
                 setPage={setPage}
-            />
+            ></Paginador>
         </div>
     )
 };

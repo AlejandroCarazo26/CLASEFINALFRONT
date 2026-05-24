@@ -1,5 +1,5 @@
 import { Location } from "@/app/types/location";
-
+import "./style.css"
 
 const LocationChula = ({location}:{location: Location}) => {
 
