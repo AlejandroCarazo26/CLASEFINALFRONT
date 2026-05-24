@@ -8,10 +8,6 @@ import { useRouter } from "next/navigation";
 
 const EpisodeChulo = ({episode}:{episode : Episode}) =>{
     
-    // const ids = episode.characters.map((e) => {
-    //     return (e.lastIndexOf(e, -1))
-    // }) 
-
     const Router = useRouter();
 
     return(

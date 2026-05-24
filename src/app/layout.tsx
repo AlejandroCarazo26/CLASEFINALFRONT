@@ -11,13 +11,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><div className="MainContainer">
-      <div className="TitleContainer">
-        <h1>Página que llama a cosas de Ricardo y Mortirio API de nuevo como no</h1>
-      </div>
-      <Navigator/>
-      {children}
-    </div></body>
+      <body>
+        <div className="MainContainer">
+          <div className="TitleContainer">
+            <h1>Página que llama a cosas de Ricardo y Mortirio API de nuevo como no</h1>
+          </div>
+          <Navigator/>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
